@@ -1,3 +1,4 @@
+import 'package:bdapp/delete.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,10 @@ class _PostPageState extends State<PostPage> {
             TextField(
               controller: novatemperatura,
             ),
-            ElevatedButton(onPressed: postValue, child: Text("Enviar dados"))
+            ElevatedButton(onPressed: postValue, child: Text("Enviar dados")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>DeletePage()));
+            }, child: Text("Ir para ágina Delete"))
           ],),
         )
       )
