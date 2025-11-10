@@ -1,4 +1,5 @@
 import 'package:bdapp/post.dart';
+import 'package:bdapp/put.dart';
 import 'package:firebase_core/firebase_core.dart'; // importa a biblioteca firebase_core
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart'; // importa a biblioteca cloud_firestore
@@ -71,7 +72,10 @@ class _TelaGetState extends State<TelaGet> { // é aqui que eu crio a logica da 
               Text("$temperatura"),
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => PostPage()));
-              }, child: Text("Ir para a página POST!"))
+              }, child: Text("Ir para a página POST!")),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> PutPage()));
+              }, child: Text("Ir pagina PUT!!"))
             ],
           ),
         ),
